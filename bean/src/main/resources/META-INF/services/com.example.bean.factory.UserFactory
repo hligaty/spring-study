@@ -1,0 +1,2 @@
+com.example.bean.factory.DefaultUserFactory
+com.example.bean.factory.SetIdUserFactory

@@ -1,4 +1,4 @@
-package com.example.bean;
+package com.example.bean.definition;
 
 public class User {
   private int id;
@@ -26,5 +26,9 @@ public class User {
             "id=" + id +
             ", name='" + name + '\'' +
             '}';
+  }
+
+  public static User createMethod() {
+    return new User();
   }
 }

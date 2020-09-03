@@ -3,12 +3,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="user" class="com.example.bean.User">
+    <bean id="user" class="com.example.bean.definition.User">
         <property name="id" value="1"/>
         <property name="name" value="123"/>
     </bean>
 
-    <bean id="superUser" class="com.example.bean.SuperUser" parent="user" primary="true">
+    <bean id="superUser" class="com.example.bean.definition.SuperUser" parent="user" primary="true">
         <property name="address" value="456"/>
     </bean>
 

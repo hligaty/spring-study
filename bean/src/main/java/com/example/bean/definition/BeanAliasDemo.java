@@ -1,4 +1,4 @@
-package com.example.bean;
+package com.example.bean.definition;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

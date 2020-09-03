@@ -1,4 +1,4 @@
-package com.example.bean;
+package com.example.bean.definition;
 
 public class SuperUser extends User {
   private String address;
