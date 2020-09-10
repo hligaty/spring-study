@@ -20,6 +20,8 @@ public class AnnotationApplicationContextAsIoCContainerDemo {
     // 启动应用上下文
     applicationContext.refresh();
     lookupCollectionByType(applicationContext);
+    // 关闭应用上下文
+    applicationContext.close();
   }
 
   @Bean
