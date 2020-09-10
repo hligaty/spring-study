@@ -36,12 +36,11 @@ public class DependencyInjectionDemo {
     // 依赖来源三: 容器内建 Bean
     Environment environment = applicationContext.getBean(Environment.class);
     System.out.println("获取 Environment 类型的 bean:" + environment);
-
-    // 这个才是真正的容器（beanFactory）
-//    System.out.println(applicationContext.getBeanFactory() == userRepository.getBeanFactory());
   }
 
   private static void whoIsIocContainer(UserRepository userRepository, BeanFactory beanFactory) {
     System.out.println(userRepository.getBeanFactory() == beanFactory);
+    // applicationContext.getBeanFactory() 这个才是真正的容器（beanFactory）
+//    System.out.println(applicationContext.getBeanFactory() == userRepository.getBeanFactory());
   }
 }
