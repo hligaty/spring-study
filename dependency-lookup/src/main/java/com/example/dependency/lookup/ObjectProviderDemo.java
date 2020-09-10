@@ -4,6 +4,9 @@ import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 
+/**
+ * 通过 ObjectProvider 进行依赖查找
+ */
 public class ObjectProviderDemo {
   public static void main(String[] args) {
     AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
