@@ -6,6 +6,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * Bean 初始化示例
+ */
 @Configuration
 public class BeanInitializationDemo {
   public static void main(String[] args) {

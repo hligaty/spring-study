@@ -8,6 +8,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.stereotype.Component;
 
+/**
+ * BeanDefinition 注册的三种方式
+ */
 @Import(AnnotationBeanDefinitionDemo.Config.class)
 public class AnnotationBeanDefinitionDemo {
   public static void main(String[] args) {

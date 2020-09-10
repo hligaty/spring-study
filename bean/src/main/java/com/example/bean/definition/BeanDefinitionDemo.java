@@ -5,10 +5,11 @@ import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.support.GenericBeanDefinition;
 
+/**
+ * 操作 Bean 元信息的两种方式
+ */
 public class BeanDefinitionDemo {
   public static void main(String[] args) {
-    //操作bean的元信息，两种方式
-
     //1
     BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.genericBeanDefinition(User.class);
 

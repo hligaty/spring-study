@@ -6,7 +6,7 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- *
+ * 注册单例的 Bean
  */
 public class SingletonBeanRegidtrstionDemo {
   public static void main(String[] args) {
