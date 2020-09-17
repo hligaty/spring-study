@@ -7,6 +7,7 @@
         <property name="id" value="1"/>
         <property name="name" value="gdp"/>
         <property name="city" value="BEIJING"/>
+        <property name="configFileLocation" value="classpath:/META-INF/user-config.properties"/>
     </bean>
 
     <bean id="superUser" class="com.example.ioc.overview.domain.SuperUser" parent="user" primary="true">
