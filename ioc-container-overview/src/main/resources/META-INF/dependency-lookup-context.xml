@@ -6,6 +6,7 @@
     <bean id="user" class="com.example.ioc.overview.domain.User">
         <property name="id" value="1"/>
         <property name="name" value="gdp"/>
+        <property name="city" value="BEIJING"/>
     </bean>
 
     <bean id="superUser" class="com.example.ioc.overview.domain.SuperUser" parent="user" primary="true">
