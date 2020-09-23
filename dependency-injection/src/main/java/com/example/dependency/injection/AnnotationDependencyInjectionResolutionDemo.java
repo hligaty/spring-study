@@ -41,32 +41,33 @@ public class AnnotationDependencyInjectionResolutionDemo {
   private User myInjectUser;
 
   // 标记为 static 后，这个 bean 就不在当前类的生命周期里了，不需要等当前类初始化后才初始化改 bean
-//  @Bean(name = AUTOWIRED_ANNOTATION_PROCESSOR_BEAN_NAME)
-//  public static AutowiredAnnotationBeanPostProcessor beanPostProcessor() {
-//    AutowiredAnnotationBeanPostProcessor beanPostProcessor = new AutowiredAnnotationBeanPostProcessor();
-//    Set<Class<? extends Annotation>> autowiredAnnotationType = new LinkedHashSet<>(
-//            Arrays.asList(
-//                    Autowired.class,
-//                    Inject.class,
-//                    MyAutowired.class,
-//                    InjectedUser.class
-//            )
-//    );
-//    beanPostProcessor.setAutowiredAnnotationTypes(autowiredAnnotationType);
-//    return beanPostProcessor;
-//  }
-
   @Bean(name = AUTOWIRED_ANNOTATION_PROCESSOR_BEAN_NAME)
   public static AutowiredAnnotationBeanPostProcessor beanPostProcessor() {
     AutowiredAnnotationBeanPostProcessor beanPostProcessor = new AutowiredAnnotationBeanPostProcessor();
     Set<Class<? extends Annotation>> autowiredAnnotationType = new LinkedHashSet<>(
             Arrays.asList(
+                    Autowired.class,
+                    Inject.class,
+                    MyAutowired.class,
                     InjectedUser.class
             )
     );
     beanPostProcessor.setAutowiredAnnotationTypes(autowiredAnnotationType);
     return beanPostProcessor;
   }
+
+  // 只注册自定义的
+//  @Bean(name = AUTOWIRED_ANNOTATION_PROCESSOR_BEAN_NAME)
+//  public static AutowiredAnnotationBeanPostProcessor beanPostProcessor() {
+//    AutowiredAnnotationBeanPostProcessor beanPostProcessor = new AutowiredAnnotationBeanPostProcessor();
+//    Set<Class<? extends Annotation>> autowiredAnnotationType = new LinkedHashSet<>(
+//            Arrays.asList(
+//                    InjectedUser.class
+//            )
+//    );
+//    beanPostProcessor.setAutowiredAnnotationTypes(autowiredAnnotationType);
+//    return beanPostProcessor;
+//  }
 
   public static void main(String[] args) {
     /**
