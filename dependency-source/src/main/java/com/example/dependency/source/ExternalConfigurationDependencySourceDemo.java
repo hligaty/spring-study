@@ -15,7 +15,7 @@ public class ExternalConfigurationDependencySourceDemo {
   @Value("${user.id:-1}")
   private Long id;
 
-  // 如果是 user.name 就会输出当前操作系统的用户名，因为系统的优先级更高
+  // 如果是 ${user.name} 就会输出当前操作系统的用户名，因为系统的优先级更高
   @Value("${usr.name}")
   private String name;
 
