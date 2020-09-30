@@ -7,6 +7,9 @@
 
     <!--    <context:annotation-config />-->
 
+<!--    Root BeanDefinition 不需要合并，不存在 parent-->
+<!--    普通 BeanDefinition GenericBeanDefinition-->
+<!--    经过合并后， GenericBeanDefinition 变成了 RootBeanDefinition-->
     <bean id="user" class="com.example.ioc.overview.domain.User">
         <property name="id" value="1"/>
         <property name="name" value="gdp"/>
@@ -22,6 +25,9 @@
         </property>
     </bean>
 
+<!--    普通 BeanDefinition GenericBeanDefinition-->
+<!--    合并后 GenericBeanDefinition 变成了 RootBeanDefinition，并且覆盖 parent 相关配置-->
+<!--    primary = true，增加了一个 address 属性-->
     <bean id="superUser" class="com.example.ioc.overview.domain.SuperUser" parent="user" primary="true">
         <property name="address" value="北京"/>
     </bean>
